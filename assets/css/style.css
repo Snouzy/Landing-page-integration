@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Poppins, Helvetica, sans-serif;
+}
+nav {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-links {
+    text-transform: uppercase;
+}
+.hamburger {
+    display: none;
+}
+
+.container {
+    max-width: 1159px;
+    height: 100vh;
+    margin: auto;
+    border: 1px solid black;
+}
+
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+}
