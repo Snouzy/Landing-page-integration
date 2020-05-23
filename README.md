@@ -1,7 +1,7 @@
 
 # Extension start-up landing page
 
-![landing_page](https://user-images.githubusercontent.com/32961176/82736646-ad9b1d80-9d2b-11ea-9bbf-857b81f1f062.png)
+![landing_page](https://user-images.githubusercontent.com/32961176/82736771-577aaa00-9d2c-11ea-94c7-6d88ed1a10ad.png)
 
 
 
