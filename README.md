@@ -1,11 +1,13 @@
-# Sketch Design File
 
-Thanks for downloading this Sketch file. We really appreciate your support!
+# Extension start-up landing page
 
-If you don't have Sketch you can use [Sketch Cloud Inspector](https://blog.sketchapp.com/introducing-cloud-inspector-free-developer-handoff-in-the-browser-59917220334a) in the browser to view the design. You don't even need a Sketch Cloud account to use it.
+![landing_page](https://user-images.githubusercontent.com/32961176/82736771-577aaa00-9d2c-11ea-94c7-6d88ed1a10ad.png)
 
-The Sketch Cloud URL for this design is: [https://www.sketch.com/s/a2682cba-62a2-463f-9f62-dba41072b990](https://www.sketch.com/s/a2682cba-62a2-463f-9f62-dba41072b990).
 
-If you'd like to learn more about how you can use Sketch Cloud Inspector to view the design, you can [read our walkthrough](https://medium.com/frontend-mentor/how-to-use-sketch-cloud-inspector-to-view-challenge-designs-55426ff90a90).
 
-We hope you enjoy the challenge!
+## Welcome! 👋
+
+## What is it ? 
+It's a challenge purposed by Frontendmentor.io. I bought the wireframe. 
+
+I'll update the readme with a link for the demo when the design will be on point.
