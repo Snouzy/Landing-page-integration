@@ -8,6 +8,7 @@ a {
 
 body {
     font-family: Poppins, Helvetica, sans-serif;
+    transition: background-color .5s ease-in-out;
 }
 nav {
     margin-top: 48px;
@@ -61,6 +62,7 @@ nav {
 .logo-text {
     color: #242A45;
 }
+
 .nav-links {
     display: flex;
     text-transform: uppercase;
@@ -92,11 +94,12 @@ nav {
 .hamburger {
     display: none;
     height: 15px;
+    cursor: pointer;
 }
 
 .hamburger .line {
     height: 3px;
-    background: #242A45;
+    background-color: #242A45;
     width: 18px;
 }
 
@@ -106,19 +109,40 @@ nav {
     background-color: #fff;
     opacity: .1;
 }
+
+.blue {
+    background: rgba(36, 42, 69, 100);
+}
+
+.text-white{
+    color: #fff;
+}
+.white {
+    background-color: #fff !important;
+}
+.appear {
+    transform: translateX(0%) !important;
+}
+
 @media screen and (max-width: 375px) {
+
+    body {
+        overflow: hidden;
+    }
+
     .separator {
         display: block;
     }
-    body {
-        background: rgba(36, 42, 69, 100);
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: inherit;
     }
+    
     .container {
         max-width: 80%;
     }
-    .logo-text{
-        color: #fff;
-    }
+
     nav {
         margin-top: 40px;
     }
@@ -131,7 +155,10 @@ nav {
         top: calc(5vh + 60px);
         text-align: center;
         height: 20rem;
+        transform: translateX(150%);
+        transition: transform .5s ease-in-out;
     }
+
     .nav-links li {
        margin-left: 0;
     }
@@ -140,11 +167,7 @@ nav {
         font-size: 20px;
         color: #fff;
     }
-    .hamburger {
-        display: flex;
-        flex-direction: column;
-        justify-content: inherit;
-    }
+
     .nav-links li:last-child {
         border: 1px solid #fff;
         border-radius: 5px;
@@ -154,7 +177,7 @@ nav {
         background: none;
         padding: none;
         border-radius: 5px;
-        box-shadow: 0 8px 8px -4px rgba(73, 93, 87, .2);
+        box-shadow: none;
         color: #fff;
     }
 }
