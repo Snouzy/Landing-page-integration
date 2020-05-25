@@ -20,6 +20,9 @@ nav {
     align-items: center;
 }
 
+.fab {
+    font-size: 24px;
+}
 .container {
     /* max-width: 1159px; */
     width: 80%;
@@ -101,22 +104,16 @@ nav {
 }
 .logo-icon-opened {
     background-color: #fff;
-    transition: all 1s ease-in-out;
-
 }
 .logo-icon-opened::before {
     background-color: rgba(36, 42, 69, 100);
-    transition: all 1s ease-in-out;
-
 }
 .logo-icon-opened::after {
     border-color: transparent transparent #fff transparent;
-    transition: all 1s ease-in-out;
-
 }
 .logo-text {
     color: #242A45;
-    transition: all 1s ease-in-out;
+    transition: all .5s ease-in-out;
 }
 
 /* The navigation */
@@ -150,6 +147,10 @@ nav {
     height: 1px;
     background-color: #fff;
     opacity: .1;
+}
+
+.fa-facebook-square {
+    margin-right: 40px;
 }
 
 /*The hamburger menu*/
@@ -199,15 +200,27 @@ nav {
         margin-top: 40px;
     }
 
-    .nav-links {
+    .nav-links-container {
         display: none;
+        justify-content: space-between;
+        position: absolute;
         color: #fff;
         flex-direction: column;
         width: 80%;
         position: absolute;
         top: calc(5vh + 60px);
         text-align: center;
-        height: 20rem;
+        height: 80%;
+    }
+    .nav-links-list {
+        height: 40%;
+    }
+    .nav-links {
+        display: flex;
+        color: #fff;
+        flex-direction: column;
+        text-align: center;
+        height: 100%;
         transform: translateX(150%);
         transition: transform 1s linear;
     }
