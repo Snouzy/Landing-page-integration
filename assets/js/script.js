@@ -1,8 +1,18 @@
 const hmbgr = document.querySelector('.hamburger');
+const lines = document.querySelectorAll('.line');
+
 hmbgr.addEventListener('click', function(){
-    document.querySelector('body').classList.toggle('blue');
-    document.querySelector('.nav-links').classList.toggle('appear');
-    const lines = document.querySelectorAll('.line');
-    [...lines].forEach(el => el.classList.toggle('white'));
-    document.querySelector('.logo-text').classList.toggle('text-white');
+    toggleClass('.voile', 'appear');
+    toggleClass('.nav-links', 'appear');
+    toggleClass('.logo-text', 'text-white');
+    toggleClass('.logo-icon', 'logo-icon-opened');
+
+    [...lines].forEach(el => {
+        el.classList.toggle('white');
+        el.classList.toggle('cross');
+    });
 })
+
+const toggleClass = (elementToToggle, classToToggle) => {
+    document.querySelector(elementToToggle).classList.toggle(classToToggle);
+}

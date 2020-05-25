@@ -2,26 +2,69 @@
     margin: 0;
     padding: 0;
 }
+
 a {
     text-decoration: none;
 }
 
 body {
     font-family: Poppins, Helvetica, sans-serif;
-    transition: background-color .5s ease-in-out;
+    animation-name: appear;
+    animation-duration: 1s;
 }
+
 nav {
     margin-top: 48px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 .container {
-    max-width: 1159px;
+    /* max-width: 1159px; */
+    width: 80%;
     height: 100vh;
     margin: auto;
 }
 
+/* General classes */
+.text-white{
+    color: #fff !important;
+}
+.white {
+    background-color: #fff !important;
+}
+.appear {
+    display: flex !important;
+    transform: translateX(0%) !important;
+}
+
+/* Keyframes */
+@keyframes appear {
+    0% {
+        margin-left: 100%;
+    }
+
+    100% {
+        margin-left: 0%;
+    }
+}
+
+/* The background on hamburger menu */
+.voile {
+    display: none;
+    background-color: rgba(36, 42, 69, 100);
+    height: 101vh;
+    width: 101vw;
+    position: absolute;
+    top: 0;
+    z-index: -10000;
+    animation-name: appear;
+    animation-duration: 1s;
+    overflow: hidden;
+}
+
+/* The logo */
 .logo {
     display: flex;
     justify-content: center;
@@ -35,7 +78,6 @@ nav {
     margin-right: 1rem;
     position: relative;
 }
-
 .logo-icon::before {
     content: "";
     position: absolute;
@@ -46,7 +88,6 @@ nav {
     background-color: #fff;
     border-radius: 2px 2px 0 0;
 }
-
 .logo-icon::after {
     content: "";
     position: absolute;
@@ -58,31 +99,45 @@ nav {
     border-width: 0 3.5px 4px 3.5px;
     border-color: transparent transparent #5267DF transparent;
 }
+.logo-icon-opened {
+    background-color: #fff;
+    transition: all 1s ease-in-out;
 
+}
+.logo-icon-opened::before {
+    background-color: rgba(36, 42, 69, 100);
+    transition: all 1s ease-in-out;
+
+}
+.logo-icon-opened::after {
+    border-color: transparent transparent #fff transparent;
+    transition: all 1s ease-in-out;
+
+}
 .logo-text {
     color: #242A45;
+    transition: all 1s ease-in-out;
 }
 
+/* The navigation */
 .nav-links {
     display: flex;
     text-transform: uppercase;
     text-decoration: none;
     list-style: none;
-    width: 50%;
     justify-content: space-between;
+    animation-name: appear;
+    animation-duration: 1s;
 }
-
 .nav-links li {
     margin-left: 2rem;
 }
-
 .nav-links li a {
     font-family: Rubik, Helvetica, sans-serif;
     color: #242A45;
     letter-spacing: 1.5px;
     font-size: 13px;
 }
-
 .nav-links li:last-child a {
     background: #FA5959;
     padding: 12px 32px 12px 32px;
@@ -90,19 +145,6 @@ nav {
     box-shadow: 0 8px 8px -4px rgba(73, 93, 87, .2);
     color: #fff;
 }
-
-.hamburger {
-    display: none;
-    height: 15px;
-    cursor: pointer;
-}
-
-.hamburger .line {
-    height: 3px;
-    background-color: #242A45;
-    width: 18px;
-}
-
 .separator {
     display: none;
     height: 1px;
@@ -110,22 +152,32 @@ nav {
     opacity: .1;
 }
 
-.blue {
-    background: rgba(36, 42, 69, 100);
+/*The hamburger menu*/
+.hamburger {
+    display: none;
+    height: 15px;
+    cursor: pointer;
+}
+.hamburger .line {
+    height: 3px;
+    background-color: #242A45;
+    width: 18px;
+    transition: all .5s ease-in-out;
+}
+.line1.cross {
+    transform : rotate(45deg) translate(5px, 5px);
 }
 
-.text-white{
-    color: #fff;
-}
-.white {
-    background-color: #fff !important;
-}
-.appear {
-    transform: translateX(0%) !important;
+.line2.cross {
+    transform: translateX(100%);
+    opacity: 0;
 }
 
-@media screen and (max-width: 375px) {
-
+.line3.cross {
+    transform : rotate(-45deg) translate(4px, -3px);
+}
+/* Responsiveness */
+@media screen and (max-width: 664px) {
     body {
         overflow: hidden;
     }
@@ -148,6 +200,7 @@ nav {
     }
 
     .nav-links {
+        display: none;
         color: #fff;
         flex-direction: column;
         width: 80%;
@@ -156,7 +209,7 @@ nav {
         text-align: center;
         height: 20rem;
         transform: translateX(150%);
-        transition: transform .5s ease-in-out;
+        transition: transform 1s linear;
     }
 
     .nav-links li {
