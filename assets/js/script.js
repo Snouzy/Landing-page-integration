@@ -5,6 +5,7 @@ hmbgr.addEventListener('click', function(){
     toggleClass('.voile', 'appear');
     toggleClass('.nav-links', 'appear');
     toggleClass('.nav-links-container', 'appear');
+    toggleClass('.nav-links-social', 'appear');
     toggleClass('.logo-text', 'text-white');
     toggleClass('.logo-icon', 'logo-icon-opened');
 
