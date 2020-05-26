@@ -56,12 +56,12 @@ nav {
 /* The background on hamburger menu */
 .voile {
     display: none;
-    background-color: rgba(36, 42, 69, 100);
+    background-color: rgba(36, 42, 69, .9);
     height: 100vh;
     width: 100vw;
     position: absolute;
     top: 0;
-    z-index: -10000;
+    z-index: -1;
     animation-name: appear;
     animation-duration: 1s;
     overflow: hidden;
@@ -137,7 +137,13 @@ nav {
     color: #242A45;
     letter-spacing: 1.5px;
     font-size: 13px;
+    transition: all .3s ease-in-out;
 }
+
+.nav-links li a:hover {
+    color: #FA5959 !important;
+}
+
 .nav-links li:last-child a {
     background: #FA5959;
     padding: 12px 32px 12px 32px;
@@ -180,6 +186,23 @@ nav {
 .line3.cross {
     transform : rotate(-45deg) translate(4px, -3px);
 }
+
+/* Download section */
+.download {
+    display: flex;
+    justify-content: center;
+    margin-top: 6.5rem;
+    z-index: -2;
+}
+.download-presentation h1 {
+    font-family: Rubik, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 3rem;
+    color: #242A45;
+}
+.download-presentation--manager {
+    display: block;
+}
 /* Responsiveness */
 @media screen and (max-width: 664px) {
     body {
@@ -201,6 +224,7 @@ nav {
 
     nav {
         margin-top: 40px;
+        z-index: 1;
     }
 
     .nav-links-container {
@@ -248,5 +272,11 @@ nav {
         border-radius: 5px;
         box-shadow: none;
         color: #fff;
+    }
+
+    /*Download responsive section*/
+    .download-presentation h1 {
+        font-size: 30px;
+        text-align: center;
     }
 }
